@@ -12,6 +12,6 @@ node('linux') {
         sh 'aws s3 cp "rectangle-${BUILD_NUMBER}.jar" s3://seis665.assignment10/
     }
     stage('Report') {
-        junit 'reports/*.xml' 
+      
     }
 }

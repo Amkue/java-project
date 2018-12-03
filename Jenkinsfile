@@ -9,7 +9,7 @@ node('linux') {
         sh 'ant -f build.xml -v'
     }
     stage('Deploy') {
-        sh 'aws s3 cp "rectangle-${BUILD_NUMBER}.jar" s3://seis665.assignment10/
+        sh 'aws s3 cp "/workspace/Assignment10/dist/rectangle-${BUILD_NUMBER}.jar" s3://seis665.assignment10/
     }
 
 }
